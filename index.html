@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Cho người dùng nhập vào các số nguyên và lưu trữ trong mảng.</h1>
+      <div class="form-group my-4 p-3" style="background-color: powderblue">
+        <p>Nhập vào số n</p>
+        <input class="form-control w-25" id="nhapSoN" />
+        <button class="btn btn-primary my-3" id="btnThemSo">Thêm số</button>
+        <div class="alert alert-primary" id="KetQuaThemSo"></div>
+      </div>
+
+      <div class="form-group my-4 p-3 bg-secondary">
+        <h3>Tính tổng số dương</h3>
+        <button class="btn btn-primary my-3" id="btnSoDuong">Tính tổng</button>
+        <div class="alert alert-primary" id="ketQuaTinhTong"></div>
+      </div>
+
+      <div class="form-group my-4 p-3 bg-danger">
+        <h3>Đếm số dương</h3>
+        <button class="btn btn-primary my-3" id="btnDemso">Đếm số</button>
+        <div class="alert alert-primary" id="ketQuaDemSo"></div>
+      </div>
+
+      <div class="form-group my-4 p-3 bg-success">
+        <h3>Tìm số dương nhỏ nhất</h3>
+        <button class="btn btn-primary my-3" id="btnSoDuongNhoNhat">
+          Tìm số nhỏ nhất
+        </button>
+        <div class="alert alert-primary" id="ketQuaTimSoNhoNhat"></div>
+      </div>
+
+      <div class="form-group my-4 p-3 bg-info">
+        <h3>Tìm số nhỏ nhất</h3>
+        <button class="btn btn-primary my-3" id="btnSoNhoNhat">
+          Tìm số dương nhỏ nhất
+        </button>
+        <div class="alert alert-primary" id="ketQuaTimNhoNhat"></div>
+      </div>
+
+      <div class="form-group my-4 p-3" style="background-color: darkslateblue">
+        <h3>Tìm số chẵn cuối cùng</h3>
+        <button class="btn btn-primary my-3" id="btnSoChanCuoiCung">
+          Tính số chẵn cuối cùng
+        </button>
+        <div class="alert alert-primary" id="ketQuaTimSoChanCuoiCung"></div>
+      </div>
+
+      <div class="form-group my-4 p-3 bg-dark text-white">
+        <h3 class="text-center">Đổi chỗ</h3>
+        <div class="row text-center justify-content-center align-items-center">
+          <div class="col">
+            <div class="form-group">
+              <p>nhập vị trí muốn đổi của số thứ 1</p>
+              <input class="form-control" id="soThu1" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <p>nhập vị trí muốn đổi của số thứ 2</p>
+              <input class="form-control" id="soThu2" />
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary my-3 text-center" id="btnDoiCho">
+          Đổi chỗ
+        </button>
+        <div class="alert alert-primary" id="ketQuaDoiCho"></div>
+      </div>
+
+      <div class="form-group my-4 p-3" style="background-color: yellow">
+        <h3>Sắp xếp tăng dần</h3>
+        <button class="btn btn-primary my-3" id="btnSapXep">
+          Sắp xếp tăng dần
+        </button>
+        <div class="alert alert-primary" id="ketQuaSapXepTangDan"></div>
+      </div>
+
+      <div class="form-group my-4 p-3" style="background-color: brown">
+        <h3>Tìm Số nguyên tố đầu tiên</h3>
+        <button class="btn btn-primary my-3" id="btnSNT">
+          Tìm số nguyên tố
+        </button>
+        <div class="alert alert-primary" id="ketQuaTimSNT"></div>
+      </div>
+
+      <div class="form-group my-4 p-3" style="background-color: plum">
+        <h3>Đếm số nguyên</h3>
+        <button class="btn btn-primary my-3" id="btnDemSoNguyen">
+          Đếm số nguyên
+        </button>
+        <div class="alert alert-primary" id="ketQuaDemSoNguyen"></div>
+      </div>
+
+      <div class="form-group my-4 p-3" style="background-color: blueviolet">
+        <h3>So Sánh số lượng âm và số lượng dương</h3>
+        <button class="btn btn-primary my-3" id="btnSoSanh">So Sánh</button>
+        <div class="alert alert-primary" id="ketQuaSoSanh"></div>
+      </div>
+    </div>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
